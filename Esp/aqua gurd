@@ -1,0 +1,38 @@
+SAFE_THRESHOLD = 300
+
+print("================================")
+print("      Aqua Guards System")
+print("================================")
+
+# Simulated Sensor Values
+sensor_values = [500, 450, 200, 100, 600]
+
+for sensor_value in sensor_values:
+
+    print("\nSensor Reading:", sensor_value)
+
+    # SAFE CONDITION
+    if sensor_value > SAFE_THRESHOLD:
+
+        led = "OFF"
+        buzzer = "OFF"
+
+        print("STATUS: SAFE")
+        print("Beach Secure")
+
+        print("LED:", led)
+        print("Buzzer:", buzzer)
+
+    # DROWNING CONDITION
+    else:
+
+        led = "ON"
+        buzzer = "ON"
+
+        print("DROWNING DETECTED !!!")
+        print("ALERT SENT")
+
+        print("LED:", led)
+        print("Buzzer:", buzzer)
+
+    print("--------------------------------")
